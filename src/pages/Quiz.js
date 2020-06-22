@@ -21,12 +21,25 @@ import {
 
 import Finish from "./Finish";
 
+const getWindowDimension = () => {
+	const width =
+		window.innerWidth ||
+		document.documentElement.clientWidth ||
+		document.body.clientWidth;
+	const height =
+		window.innerHeight ||
+		document.documentElement.clientHeight ||
+		document.body.clientHeight;
+	return { width, height };
+};
+
 export default function Quiz() {
-	const [questions, setQuestions] = useState([]);
 	const [questionNow, setQuestionNow] = useState(0);
 	const [error, setError] = useState("");
 	const [score, setScore] = useState(0);
-	const [finished, setFinished] = useState(true);
+	const [finished, setFinished] = useState(false);
+
+	const isMobile = getWindowDimension().width < 768 ? true : false;
 
 	let option = null;
 	const handleNext = () => {
@@ -55,12 +68,8 @@ export default function Quiz() {
 		console.log(option);
 	};
 
-	useEffect(() => {
-		setQuestions(data);
-	}, []);
-
 	if (finished) {
-		return <Finish score={score} />;
+		return <Finish score={score} number={data.length} />;
 	} else {
 		return (
 			<Container>
@@ -99,7 +108,14 @@ export default function Quiz() {
 				{error != "" && <Error>{error}</Error>}
 				<Footer>
 					<FooterContainer>
-						<FooterRights>Feito por Fernando Neto</FooterRights>
+						{!isMobile && (
+							<FooterRights>
+								Feito por{" "}
+								<a target="_blank" href="https://instagram.com/fernandonetom">
+									Fernando Neto
+								</a>
+							</FooterRights>
+						)}
 						<FooterNext onClick={handleNext}>Avançar</FooterNext>
 					</FooterContainer>
 				</Footer>

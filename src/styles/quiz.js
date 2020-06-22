@@ -4,6 +4,9 @@ export const Container = styled.div`
 	width: 100%;
 	max-width: 1280px;
 	margin: 0 auto;
+	@media (max-width: 768px) {
+		overflow-x: hidden;
+	}
 `;
 export const Header = styled.div`
 	display: flex;
@@ -12,12 +15,31 @@ export const Header = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	font-weight: ${(props) => props.theme.fontWeight.light};
+	@media (min-width: 768px) {
+		padding: 20px 0;
+	}
+	@media (max-width: 768px) {
+		padding: 20px;
+	}
 `;
 export const HeaderQuestion = styled.div`
 	font-size: ${(props) => props.theme.fontSize.medium};
 `;
 export const Error = styled.div`
-	font-size: ${(props) => props.theme.fontSize.medium};
+	font-size: ${(props) => props.theme.fontSize.small};
+	color: ${(props) => props.theme.colors.textLight};
+	background: transparent linear-gradient(180deg, #c9484c 0%, #ff5a5f 100%) 0%
+		0% no-repeat padding-box;
+	padding: 10px;
+	text-align: center;
+	@media (max-width: 768px) {
+		margin: 20px;
+	}
+	@media (min-width: 768px) {
+		width: 300px;
+		margin: 0 auto;
+		border-radius: 5px;
+	}
 `;
 export const HeaderBack = styled.div`
 	font-size: ${(props) => props.theme.fontSize.xsmall};
@@ -40,7 +62,10 @@ export const BeforeQuestion = styled.div`
 	color: ${(props) => props.theme.colors.primary};
 	font-size: ${(props) => props.theme.fontSize.small};
 	font-weight: ${(props) => props.theme.fontWeight.light};
-	margin-top: 20px;
+	padding-top: 20px;
+	@media (max-width: 768px) {
+		padding: 20px;
+	}
 `;
 export const Question = styled.div`
 	width: 100%;
@@ -61,6 +86,9 @@ export const Answer = styled.div`
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 		grid-gap: 20px;
+	}
+	@media (max-width: 768px) {
+		padding: 20px;
 	}
 `;
 export const AnswerGroup = styled.div`
@@ -168,8 +196,13 @@ export const FooterContainer = styled.div`
 	max-width: 1280px;
 	margin: 0 auto;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	@media (max-width: 768px) {
+		justify-content: center;
+	}
+	@media (min-width: 768px) {
+		justify-content: space-between;
+	}
 `;
 export const FooterRights = styled.div`
 	color: ${(props) => props.theme.colors.textDark};
@@ -182,7 +215,13 @@ export const FooterNext = styled.div`
 	border-radius: 5px;
 	cursor: pointer;
 	color: ${(props) => props.theme.colors.textDark};
-	font-size: ${(props) => props.theme.fontSize.small};
+	@media (max-width: 768px) {
+		font-size: ${(props) => props.theme.fontSize.medium};
+	}
+	@media (min-width: 768px) {
+		font-size: ${(props) => props.theme.fontSize.small};
+	}
+
 	transition: 0.2s all;
 	&:hover {
 		background: transparent
