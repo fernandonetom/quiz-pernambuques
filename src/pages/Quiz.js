@@ -18,6 +18,8 @@ import {
 	FooterNext,
 	Error,
 	FeitoMobile,
+	InputCustom,
+	LabelCustom,
 } from "../styles/quiz";
 
 import Finish from "./Finish";
@@ -47,24 +49,25 @@ export default function Quiz() {
 		if (!option) {
 			setError("Selecione uma opção!");
 		} else {
-			setError("");
+			document.getElementById("question").reset();
+			if (error.length > 0) {
+				setError("");
+			}
 
 			if (data[questionNow].answers[option] === data[questionNow].answer) {
 				setScore(score + 1);
-				console.log("acertou");
 			}
 
 			if (questionNow + 1 === data.length) {
 				setFinished(true);
 			}
+
 			setQuestionNow(questionNow + 1);
-			document.getElementById("question").reset();
 		}
 	};
 
 	const handleOption = (e) => {
 		option = e.target.value;
-		console.log(option);
 	};
 
 	if (finished) {
@@ -91,17 +94,15 @@ export default function Quiz() {
 						{data[questionNow].answers.map((item, index) => {
 							return (
 								<AnswerGroup key={index}>
-									<input
-										id={questionNow + "option-" + index}
+									<InputCustom
+										id={"option-" + index}
 										name="option"
 										value={index}
 										//onChange={(e) => handleOption(e)}
 										onClick={(e) => handleOption(e)}
 										type="radio"
 									/>
-									<label htmlFor={questionNow + "option-" + index}>
-										{item}
-									</label>
+									<LabelCustom htmlFor={"option-" + index}>{item}</LabelCustom>
 								</AnswerGroup>
 							);
 						})}

@@ -101,56 +101,20 @@ export const AnswerGroup = styled.div`
 	&:hover {
 		transform: scale(1.05);
 	}
+`;
+export const InputCustom = styled.input`
+	width: 32px;
+	height: 32px;
+	order: 1;
+	z-index: 2;
+	position: absolute;
+	right: 30px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	visibility: hidden;
 
-	label {
-		padding: 12px 30px;
-		width: 100%;
-		display: block;
-		text-align: left;
-		color: #3c454c;
-		cursor: pointer;
-		position: relative;
-		z-index: 2;
-		transition: color 200ms ease-in;
-		overflow: hidden;
-
-		&:before {
-			width: 10px;
-			height: 10px;
-			border-radius: 50%;
-			content: "";
-			background: transparent linear-gradient(180deg, #087e8b 0%, #20a39e 100%)
-				0% 0% no-repeat padding-box;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%) scale3d(1, 1, 1);
-			transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-			opacity: 0;
-			z-index: -1;
-		}
-
-		&:after {
-			width: 32px;
-			height: 32px;
-			content: "";
-			border: 2px solid #d1d7dc;
-			background-color: #fff;
-			background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
-			background-repeat: no-repeat;
-			background-position: 2px 3px;
-			border-radius: 50%;
-			z-index: 2;
-			position: absolute;
-			right: 30px;
-			top: 50%;
-			transform: translateY(-50%);
-			cursor: pointer;
-			transition: all 200ms ease-in;
-		}
-	}
-
-	input:checked ~ label {
+	&:checked ~ label {
 		color: #fff;
 
 		&:before {
@@ -163,18 +127,52 @@ export const AnswerGroup = styled.div`
 			border-color: ${(props) => props.theme.colors.primary};
 		}
 	}
+`;
+export const LabelCustom = styled.label`
+	padding: 12px 30px;
+	width: 100%;
+	display: block;
+	text-align: left;
+	color: #3c454c;
+	cursor: pointer;
+	position: relative;
+	z-index: 2;
+	transition: color 200ms ease-in;
+	overflow: hidden;
 
-	input {
+	&:before {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		content: " ";
+		background: transparent linear-gradient(180deg, #087e8b 0%, #20a39e 100%) 0%
+			0% no-repeat padding-box;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+		opacity: 0;
+		z-index: -1;
+	}
+
+	&:after {
 		width: 32px;
 		height: 32px;
-		order: 1;
+		content: " ";
+		border: 2px solid #d1d7dc;
+		background-color: #fff;
+		background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+		background-repeat: no-repeat;
+		background-position: 2px 3px;
+		border-radius: 50%;
 		z-index: 2;
 		position: absolute;
 		right: 30px;
 		top: 50%;
 		transform: translateY(-50%);
 		cursor: pointer;
-		visibility: hidden;
+		transition: all 200ms ease-in;
 	}
 `;
 export const AnswerLabel = styled.div`
