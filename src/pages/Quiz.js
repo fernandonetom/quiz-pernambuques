@@ -19,6 +19,8 @@ import {
 	Error,
 } from "../styles/quiz";
 
+import Finish from "./Finish";
+
 export default function Quiz() {
 	const [questions, setQuestions] = useState([]);
 	const [questionNow, setQuestionNow] = useState(0);
@@ -58,7 +60,7 @@ export default function Quiz() {
 	}, []);
 
 	if (finished) {
-		return <div>finalizou, seu score é {score}</div>;
+		return <Finish score={score} />;
 	} else {
 		return (
 			<Container>
