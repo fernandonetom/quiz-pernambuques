@@ -182,6 +182,9 @@ export const AnswerLabel = styled.div`
 		0% no-repeat padding-box;
 	border-radius: 5px;
 `;
+export const FeitoMobile = styled.div`
+	text-align: center;
+`;
 export const Footer = styled.div`
 	position: fixed;
 	bottom: 0;

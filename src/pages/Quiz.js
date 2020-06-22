@@ -17,6 +17,7 @@ import {
 	FooterRights,
 	FooterNext,
 	Error,
+	FeitoMobile,
 } from "../styles/quiz";
 
 import Finish from "./Finish";
@@ -74,7 +75,9 @@ export default function Quiz() {
 		return (
 			<Container>
 				<Header>
-					<HeaderQuestion>Questão {questionNow + 1} de 8</HeaderQuestion>
+					<HeaderQuestion>
+						Questão {questionNow + 1} de {data.length}
+					</HeaderQuestion>
 					<HeaderBack>
 						<Link to="/">
 							<AiOutlineArrowLeft />
@@ -82,7 +85,7 @@ export default function Quiz() {
 						</Link>
 					</HeaderBack>
 				</Header>
-				<BeforeQuestion>Você fala Pernambuques?</BeforeQuestion>
+				<BeforeQuestion>Você fala Pernambuquês?</BeforeQuestion>
 				<Question>Então como fala: "{data[questionNow].question}"?</Question>
 				<form id="question">
 					<Answer>
@@ -106,6 +109,14 @@ export default function Quiz() {
 					</Answer>
 				</form>
 				{error != "" && <Error>{error}</Error>}
+				{isMobile && (
+					<FeitoMobile>
+						Feito por{" "}
+						<a target="_blank" href="https://instagram.com/fernandonetom">
+							Fernando Neto
+						</a>
+					</FeitoMobile>
+				)}
 				<Footer>
 					<FooterContainer>
 						{!isMobile && (

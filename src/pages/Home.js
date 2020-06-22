@@ -23,7 +23,7 @@ export default function Home() {
 				</Logo>
 				<Section>
 					<Left>
-						<h1>Você sabe falar Pernambuques?</h1>
+						<h1>Você sabe falar Pernambuquês?</h1>
 						<h4>Nosso quiz é perfeito para você descobrir.</h4>
 						<Link to="/quiz">
 							Bora lá <AiOutlineArrowRight />

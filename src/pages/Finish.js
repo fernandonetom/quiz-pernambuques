@@ -1,5 +1,6 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
+import { AiOutlineBackward } from "react-icons/ai";
 import ShareButtons from "../components/ShareButtons";
 import {
 	Container,
@@ -49,6 +50,9 @@ export default function Finish({ score, number }) {
 							<ScoreQuestions>
 								Você acertou {score} de {number}
 							</ScoreQuestions>
+							<a href="/quiz">
+								Refazer <AiOutlineBackward />
+							</a>
 						</Score>
 						<ShareBox>
 							<h3>Compartilhe:</h3>

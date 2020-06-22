@@ -1,6 +1,6 @@
 [
 	{
-		"question": "Tá muito caro",
+		"question": "Isso é muito caro",
 		"answers": [
 			"tá caro",
 			"oxe, tá caro demais",
@@ -20,5 +20,93 @@
 		],
 		"answered": false,
 		"answer": "tô liso batendo"
+	},
+	{
+		"question": "Mastiga direito",
+		"answers": [
+			"mastiga de boca fechada",
+			"mastiga bonito",
+			"oxe, deixa de zuada!",
+			"oxe, tás comendo merda é?"
+		],
+		"answered": false,
+		"answer": "oxe, tás comendo merda é?"
+	},
+	{
+		"question": "Estou nem aí",
+		"answers": [
+			"oxe, não quero saber",
+			"oxe, grande merda!",
+			"deixa de fofoca",
+			"não quero saber de fofoca"
+		],
+		"answered": false,
+		"answer": "oxe, grande merda!"
+	},
+	{
+		"question": "De má qualidade",
+		"answers": [
+			"oxe, é peba!",
+			"coisa fraca",
+			"coisa do paraguai",
+			"isso não presta"
+		],
+		"answered": false,
+		"answer": "oxe, é peba!"
+	},
+	{
+		"question": "Não tem comparação",
+		"answers": [
+			"coisa ótima",
+			"isso é excelente",
+			"tem parêia não",
+			"legal demais"
+		],
+		"answered": false,
+		"answer": "tem parêia não"
+	},
+	{
+		"question": "Algo inesperado",
+		"answers": [
+			"é de cair o cú da bunda",
+			"é aterrorizante",
+			"faz muito medo",
+			"surpreendente"
+		],
+		"answered": false,
+		"answer": "é de cair o cú da bunda"
+	},
+	{
+		"question": "Era uma vez",
+		"answers": [
+			"naquele dia...",
+			"quando passei lá",
+			"naquele tempo",
+			"sem mentira nenhuma"
+		],
+		"answered": false,
+		"answer": "sem mentira nenhuma"
+	},
+	{
+		"question": "Você é novo pra fazer isso",
+		"answers": [
+			"você é uma criança",
+			"nem tirasse a catinga do mijo ainda",
+			"tu é muito novo",
+			"você não pode fazer isso"
+		],
+		"answered": false,
+		"answer": "nem tirasse a catinga do mijo ainda"
+	},
+	{
+		"question": "Você é sortudo",
+		"answers": [
+			"tu tem muita sorte bixo",
+			"tu se acha",
+			"nasceu com o cú virado pra lua",
+			"tem sorte que só a febe"
+		],
+		"answered": false,
+		"answer": "nasceu com o cú virado pra lua"
 	}
 ]

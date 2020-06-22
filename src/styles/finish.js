@@ -45,6 +45,33 @@ export const Score = styled.section`
 	@media (min-width: 768px) {
 		margin-right: 150px;
 	}
+	text-align: center;
+	a {
+		background: transparent linear-gradient(180deg, #fff412 0%, #e2d80e 100%) 0%
+			0% no-repeat padding-box;
+		box-shadow: 0px 3px 6px #00000029;
+		border-radius: 10px;
+		padding: 10px 70px;
+		cursor: pointer;
+		font-size: 20px;
+		font-weight: ${(props) => props.theme.fontWeight.semibold};
+		display: inline-flex;
+		align-items: center;
+		margin-top: 30px;
+
+		transition: 0.3s all;
+		text-decoration: none;
+		color: ${(props) => props.theme.colors.textDark};
+
+		svg {
+			margin-left: 10px;
+		}
+		&:hover {
+			background: transparent linear-gradient(180deg, #ffff32 0%, #a2d100 100%)
+				0% 0% no-repeat padding-box;
+			transform: scale(1.1);
+		}
+	}
 `;
 export const ScoreNumber = styled.section`
 	background: transparent linear-gradient(180deg, #67ad31 0%, #65a236 100%) 0%
@@ -98,6 +125,10 @@ export const ShareBox = styled.section`
 	}
 	@media (min-width: 768px) {
 		padding-left: 30px;
+	}
+	@media (max-width: 768px) {
+		margin-top: 10px;
+		margin-bottom: 30px;
 	}
 `;
 export const Footer = styled.section`
