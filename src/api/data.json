@@ -1,0 +1,24 @@
+[
+	{
+		"question": "Tá muito caro",
+		"answers": [
+			"tá caro",
+			"oxe, tá caro demais",
+			"oxe, e é de ouro é?",
+			"caramba, negócio caro"
+		],
+		"answered": false,
+		"answer": "oxe, e é de ouro é?"
+	},
+	{
+		"question": "Estou sem dinheiro",
+		"answers": [
+			"estou sem grana",
+			"acabou meu salário",
+			"tô liso batendo",
+			"oxe, tenho dinheiro não"
+		],
+		"answered": false,
+		"answer": "tô liso batendo"
+	}
+]
