@@ -184,6 +184,7 @@ export const AnswerLabel = styled.div`
 `;
 export const FeitoMobile = styled.div`
 	text-align: center;
+	margin-bottom: 60px;
 `;
 export const Footer = styled.div`
 	position: fixed;
@@ -192,6 +193,7 @@ export const Footer = styled.div`
 	background: #ffba49 0% 0% no-repeat padding-box;
 	height: 50px;
 	width: 100%;
+	z-index: 3;
 `;
 export const FooterContainer = styled.div`
 	width: 100%;

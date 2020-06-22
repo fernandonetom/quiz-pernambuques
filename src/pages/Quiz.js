@@ -48,7 +48,6 @@ export default function Quiz() {
 			setError("Selecione uma opção!");
 		} else {
 			setError("");
-			data[questionNow].answered = true;
 
 			if (data[questionNow].answers[option] === data[questionNow].answer) {
 				setScore(score + 1);
@@ -59,7 +58,6 @@ export default function Quiz() {
 				setFinished(true);
 			}
 			setQuestionNow(questionNow + 1);
-			console.log("seu score" + score);
 			document.getElementById("question").reset();
 		}
 	};
@@ -87,6 +85,7 @@ export default function Quiz() {
 				</Header>
 				<BeforeQuestion>Você fala Pernambuquês?</BeforeQuestion>
 				<Question>Então como fala: "{data[questionNow].question}"?</Question>
+				{error != "" && <Error>{error}</Error>}
 				<form id="question">
 					<Answer>
 						{data[questionNow].answers.map((item, index) => {
@@ -108,7 +107,7 @@ export default function Quiz() {
 						})}
 					</Answer>
 				</form>
-				{error != "" && <Error>{error}</Error>}
+
 				{isMobile && (
 					<FeitoMobile>
 						Feito por{" "}
