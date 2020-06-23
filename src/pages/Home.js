@@ -37,7 +37,11 @@ export default function Home() {
 			<Footer>
 				<FooterContent>
 					Feito por{" "}
-					<a target="_blank" href="https://instagram.com/fernandonetom">
+					<a
+						target="_blank"
+						rel="noopener noreferrer"
+						href="https://instagram.com/fernandonetom"
+					>
 						Fernando Neto
 					</a>
 				</FooterContent>

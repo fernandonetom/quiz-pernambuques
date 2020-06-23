@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import data from "../api/data.json";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -88,7 +88,7 @@ export default function Quiz() {
 				</Header>
 				<BeforeQuestion>Você fala Pernambuquês?</BeforeQuestion>
 				<Question>Então como fala: "{data[questionNow].question}"?</Question>
-				{error != "" && <Error>{error}</Error>}
+				{error !== "" && <Error>{error}</Error>}
 				<form id="question">
 					<Answer>
 						{data[questionNow].answers.map((item, index) => {
@@ -112,7 +112,11 @@ export default function Quiz() {
 				{isMobile && (
 					<FeitoMobile>
 						Feito por{" "}
-						<a target="_blank" href="https://instagram.com/fernandonetom">
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							href="https://instagram.com/fernandonetom"
+						>
 							Fernando Neto
 						</a>
 					</FeitoMobile>
@@ -122,7 +126,11 @@ export default function Quiz() {
 						{!isMobile && (
 							<FooterRights>
 								Feito por{" "}
-								<a target="_blank" href="https://instagram.com/fernandonetom">
+								<a
+									target="_blank"
+									rel="noopener noreferrer"
+									href="https://instagram.com/fernandonetom"
+								>
 									Fernando Neto
 								</a>
 							</FooterRights>

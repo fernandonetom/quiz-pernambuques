@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { AiOutlineBackward } from "react-icons/ai";
 import ShareButtons from "../components/ShareButtons";
 import {
@@ -68,6 +68,7 @@ export default function Finish({ score, number }) {
 						<a
 							target="_blank"
 							title="Instagram"
+							rel="noopener noreferrer"
 							href="https://instagram.com/fernandonetom"
 						>
 							Fernando Neto
