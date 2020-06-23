@@ -46,6 +46,8 @@ export const Left = styled.section`
 		font-size: 50px;
 		color: ${(props) => props.theme.colors.textLight};
 		font-weight: ${(props) => props.theme.fontWeight.black};
+		animation-name: fade;
+		animation-duration: 500ms;
 		@media (max-width: 768px) {
 			font-size: 40px;
 		}
@@ -53,6 +55,10 @@ export const Left = styled.section`
 	h4 {
 		color: ${(props) => props.theme.colors.textLight};
 		font-weight: ${(props) => props.theme.fontWeight.light};
+		animation-name: fade;
+		animation-duration: 500ms;
+		animation-delay: 300ms;
+		animation-fill-mode: backwards;
 	}
 	a {
 		background: transparent linear-gradient(180deg, #fff412 0%, #e2d80e 100%) 0%
@@ -69,6 +75,10 @@ export const Left = styled.section`
 		transition: 0.3s all;
 		text-decoration: none;
 		color: ${(props) => props.theme.colors.textDark};
+		animation-name: fade;
+		animation-duration: 500ms;
+		animation-delay: 500ms;
+		animation-fill-mode: backwards;
 
 		svg {
 			margin-left: 10px;
@@ -76,7 +86,23 @@ export const Left = styled.section`
 		&:hover {
 			background: transparent linear-gradient(180deg, #ffff32 0%, #a2d100 100%)
 				0% 0% no-repeat padding-box;
-			transform: scale(1.1) translateX(15px);
+
+			@media (max-width: 768px) {
+				transform: scale(1.1);
+			}
+			@media (min-width: 768px) {
+				transform: scale(1.1) translateX(15px);
+			}
+		}
+	}
+	@keyframes fade {
+		from {
+			opacity: 0;
+			transform: translateX(-15px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
 		}
 	}
 	@media (min-width: 768px) {
@@ -91,9 +117,23 @@ export const Right = styled.section`
 	color: ${(props) => props.theme.colors.textDark};
 	img {
 		width: 400px;
+		animation-name: fade;
+		animation-duration: 500ms;
+		animation-delay: 250ms;
+		animation-fill-mode: backwards;
 		@media (max-width: 768px) {
 			margin-top: 100px;
 			width: 100%;
+		}
+	}
+	@keyframes fade {
+		from {
+			opacity: 0;
+			transform: translateX(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
 		}
 	}
 `;
