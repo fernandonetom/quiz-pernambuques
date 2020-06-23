@@ -139,6 +139,7 @@ export const LabelCustom = styled.label`
 	z-index: 2;
 	transition: color 200ms ease-in;
 	overflow: hidden;
+	text-transform: initial;
 
 	&:before {
 		width: 10px;

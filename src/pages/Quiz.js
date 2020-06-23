@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import data from "../api/data.json";
+//import data from "../api/data.json";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link } from "react-router-dom";
+//import { shuffle } from "../components/functions";
+import { GetQuestions } from "../components/getApi";
 
 import {
 	Container,
@@ -23,6 +25,8 @@ import {
 } from "../styles/quiz";
 
 import Finish from "./Finish";
+
+const data = GetQuestions();
 
 const getWindowDimension = () => {
 	const width =
@@ -102,7 +106,9 @@ export default function Quiz() {
 										onClick={(e) => handleOption(e)}
 										type="radio"
 									/>
-									<LabelCustom htmlFor={"option-" + index}>{item}</LabelCustom>
+									<LabelCustom htmlFor={"option-" + index}>
+										{item.charAt(0).toUpperCase() + item.slice(1)}
+									</LabelCustom>
 								</AnswerGroup>
 							);
 						})}

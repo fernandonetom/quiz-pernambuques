@@ -8,6 +8,7 @@ export default createGlobalStyle`
         font-family: 'Noto Sans JP', sans-serif;
     }
     body{
-        background-color: ${(props) => props.theme.colors.backgroundColorQuiz}
+        background-color: ${(props) => props.theme.colors.backgroundColorQuiz};
+        overflow-x: hidden;
     }
 `;

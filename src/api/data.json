@@ -108,5 +108,77 @@
 		],
 		"answered": false,
 		"answer": "nasceu com o cú virado pra lua"
+	},
+	{
+		"question": "Estou saindo de casa",
+		"answers": [
+			"tô tomando banho",
+			"espera um pouco",
+			"oxe, já tô saindo",
+			"tô quase chegando"
+		],
+		"answered": false,
+		"answer": "tô quase chegando"
+	},
+	{
+		"question": "Não está escutando?",
+		"answers": [
+			"Tais môco?",
+			"Tás com o ouvido no cú é?",
+			"Tenho que gritar é?",
+			"Presta atenção"
+		],
+		"answered": false,
+		"answer": "Tás com o ouvido no cú é?"
+	},
+	{
+		"question": "Cara engraçado!",
+		"answers": [
+			"Caba palhaço",
+			"Caba fresco",
+			"Caba mugangento",
+			"Caba engraçado"
+		],
+		"answered": false,
+		"answer": "Caba mugangento"
+	},
+	{
+		"question": "Fala sério!",
+		"answers": [
+			"Num tá ca peste não",
+			"Seja coerente",
+			"Tenha respeito",
+			"Seja sério"
+		],
+		"answered": false,
+		"answer": "Num tá ca peste não"
+	},
+	{
+		"question": "Nossa, é mesmo?",
+		"answers": ["De verdade?", "Mas rapaz", "Oxe, e é, é?", "Topado"],
+		"answered": false,
+		"answer": "Oxe, e é, é?"
+	},
+	{
+		"question": "Não vou fazer isso",
+		"answers": [
+			"Tô viçando não",
+			"Não quero fazer isso",
+			"Tás pensando oque?",
+			"Vai te catar!"
+		],
+		"answered": false,
+		"answer": "Tô viçando não"
+	},
+	{
+		"question": "É semana que vem",
+		"answers": [
+			"é de hoje a 8 ainda",
+			"é na próxima semana",
+			"semana que vem",
+			"semana que entra"
+		],
+		"answered": false,
+		"answer": "é de hoje a 8 ainda"
 	}
 ]
