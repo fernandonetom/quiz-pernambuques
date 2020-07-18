@@ -57,7 +57,7 @@ export default function Finish({ score, number }) {
 						<ShareBox>
 							<h3>Compartilhe:</h3>
 							<div>
-								<ShareButtons />
+								<ShareButtons score={nota.toFixed(1)} />
 							</div>
 						</ShareBox>
 					</Section>

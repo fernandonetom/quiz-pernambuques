@@ -19,31 +19,26 @@ import {
 	WhatsappIcon,
 } from "react-share";
 
-export default function ShareButtons() {
+export default function ShareButtons({ score }) {
+	const title = `Minha nota foi ${score}, quanto você consegue?`;
 	return (
 		<>
-			<WhatsappShareButton title={Config.title} url={Config.url}>
+			<WhatsappShareButton title={title} separator=" | " url={Config.url}>
 				<WhatsappIcon round={true} />
 			</WhatsappShareButton>
-			<FacebookShareButton title={Config.title} url={Config.url}>
+			<FacebookShareButton quote={title} url={Config.url}>
 				<FacebookIcon round={true} />
 			</FacebookShareButton>
-			<FacebookMessengerShareButton title={Config.title} url={Config.url}>
-				<FacebookMessengerIcon round={true} />
-			</FacebookMessengerShareButton>
-			<EmailShareButton subject={Config.title} body={Config.url}>
+			<EmailShareButton subject={title} separator=" | " body={Config.url}>
 				<EmailIcon round={true} />
 			</EmailShareButton>
-			<PinterestShareButton description={Config.title}>
-				<PinterestIcon round={true} />
-			</PinterestShareButton>
-			<RedditShareButton title={Config.title}>
+			<RedditShareButton title={title} url={Config.url}>
 				<RedditIcon round={true} />
 			</RedditShareButton>
-			<TelegramShareButton title={Config.title}>
+			<TelegramShareButton title={title} url={Config.url}>
 				<TelegramIcon round={true} />
 			</TelegramShareButton>
-			<TwitterShareButton title={Config.title} url={Config.url}>
+			<TwitterShareButton title={title} url={Config.url}>
 				<TwitterIcon round={true} />
 			</TwitterShareButton>
 		</>

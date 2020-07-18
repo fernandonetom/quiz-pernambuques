@@ -1,4 +1,4 @@
 export default {
-	url: "https://quiz-pernambuques.netlify.app",
+	url: "https://quizpernambuques.fernandoneto.com.br/",
 	title: "Quiz Pernambuquês",
 };
