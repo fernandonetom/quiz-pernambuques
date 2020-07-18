@@ -29,18 +29,18 @@ export default function ShareButtons({ score }) {
 			<FacebookShareButton quote={title} url={Config.url}>
 				<FacebookIcon round={true} />
 			</FacebookShareButton>
-			<EmailShareButton subject={title} separator=" | " body={Config.url}>
-				<EmailIcon round={true} />
-			</EmailShareButton>
-			<RedditShareButton title={title} url={Config.url}>
-				<RedditIcon round={true} />
-			</RedditShareButton>
 			<TelegramShareButton title={title} url={Config.url}>
 				<TelegramIcon round={true} />
 			</TelegramShareButton>
 			<TwitterShareButton title={title} url={Config.url}>
 				<TwitterIcon round={true} />
 			</TwitterShareButton>
+			<EmailShareButton subject={title} separator=" | " body={Config.url}>
+				<EmailIcon round={true} />
+			</EmailShareButton>
+			<RedditShareButton title={title} url={Config.url}>
+				<RedditIcon round={true} />
+			</RedditShareButton>
 		</>
 	);
 }
